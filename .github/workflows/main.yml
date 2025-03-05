@@ -1,0 +1,12 @@
+name: Example workflow
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run a script
+      run: echo "Hello, world!"
+      env:
+        ENV_VAR: ${{secrets.ENV_VAR}}
