@@ -1,0 +1,9 @@
+{
+	"name": "DataEngineeringDummyDataFactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "55c03763-f6c0-4e30-b09a-659b05c246f5",
+		"tenantId": "6b86057a-5146-42d4-9b4d-803eadfa6e4d"
+	}
+}
