@@ -1,0 +1,10 @@
+{
+	"name": "is_key_vaults",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://dataengineerin2555767360.vault.azure.net/"
+		}
+	}
+}
