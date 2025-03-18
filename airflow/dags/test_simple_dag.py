@@ -26,11 +26,10 @@ with DAG(
     default_args=default_args,
     description='A simple test DAG',
     schedule_interval=timedelta(days=1),
-    start_date=days_ago(0),
+    start_date=days_ago(1),
     tags=['example'],
 ) as dag:
 
-    
     task1 = PythonOperator(
         task_id='first_task',
         python_callable=my_first_function,
