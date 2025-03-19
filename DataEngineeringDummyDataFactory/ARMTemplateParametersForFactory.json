@@ -5,11 +5,23 @@
 		"factoryName": {
 			"value": "DataEngineeringDummyDataFactory"
 		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
 		"AzureDatabricks1_accessToken": {
 			"value": ""
 		},
 		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
 			"value": "0304-034718-5xsv8ney"
+		},
+		"AzureDatabricksKeyVault_properties_typeProperties_existingClusterId": {
+			"value": "0304-034718-5xsv8ney"
+		},
+		"is_key_vaults_properties_typeProperties_baseUrl": {
+			"value": "https://dataengineerin2555767360.vault.azure.net/"
+		},
+		"trigger_daily_properties_extract_daily_parameters_databricks_mode": {
+			"value": 0
 		}
 	}
 }
