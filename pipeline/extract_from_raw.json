@@ -24,7 +24,10 @@
 				"typeProperties": {
 					"notebookPath": "/Users/sunnyluanluan@gmail.com/data_engineering/notebooks/m06sparkbasics",
 					"baseParameters": {
-						"databricks_mode": "@pipeline().variables.databricks_mode"
+						"databricks_mode": {
+							"value": "@variables('databricks_mode')",
+							"type": "Expression"
+						}
 					}
 				},
 				"linkedServiceName": {
@@ -54,7 +57,10 @@
 				"typeProperties": {
 					"notebookPath": "/Users/sunnyluanluan@gmail.com/data_engineering/notebooks/m06sparkbasics",
 					"baseParameters": {
-						"databricks_mode": "@pipeline().variables.databricks_mode"
+						"databricks_mode": {
+							"value": "@variables('databricks_mode')",
+							"type": "Expression"
+						}
 					}
 				},
 				"linkedServiceName": {
