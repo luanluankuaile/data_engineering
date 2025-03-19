@@ -1,0 +1,27 @@
+{
+	"name": "trigger_daily",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "extract_from_raw",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"databricks_mode": 0
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2025-03-19T09:55:00",
+				"timeZone": "China Standard Time"
+			}
+		}
+	}
+}
