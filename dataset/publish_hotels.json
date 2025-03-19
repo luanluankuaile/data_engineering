@@ -1,5 +1,5 @@
 {
-	"name": "publish_expedia",
+	"name": "publish_hotels",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage1",
@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"folderPath": "expedia",
+				"folderPath": "hotels",
 				"container": "publish-data-aggregation"
 			},
 			"columnDelimiter": ",",
