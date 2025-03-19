@@ -52,7 +52,10 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/sunnyluanluan@gmail.com/data_engineering/notebooks/m06sparkbasics"
+					"notebookPath": "/Users/sunnyluanluan@gmail.com/data_engineering/notebooks/m06sparkbasics",
+					"baseParameters": {
+						"databricks_mode": "@pipeline().variables.databricks_mode"
+					}
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricksKeyVault",
