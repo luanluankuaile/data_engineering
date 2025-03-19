@@ -25,7 +25,7 @@
 					"notebookPath": "/Users/sunnyluanluan@gmail.com/data_engineering/notebooks/m06sparkbasics",
 					"baseParameters": {
 						"databricks_mode": {
-							"value": "@variables('databricks_mode')",
+							"value": "@string(variables('databricks_mode'))",
 							"type": "Expression"
 						}
 					}
@@ -58,7 +58,7 @@
 					"notebookPath": "/Users/sunnyluanluan@gmail.com/data_engineering/notebooks/m06sparkbasics",
 					"baseParameters": {
 						"databricks_mode": {
-							"value": "@variables('databricks_mode')",
+							"value": "@string(variables('databricks_mode'))",
 							"type": "Expression"
 						}
 					}
