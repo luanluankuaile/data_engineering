@@ -7,7 +7,7 @@
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
-						"activity": "copy_from_raw",
+						"activity": "If Condition1",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -34,9 +34,9 @@
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
-						"activity": "copy_from_raw",
+						"activity": "If Condition1",
 						"dependencyConditions": [
-							"Succeeded"
+							"Completed"
 						]
 					}
 				],
@@ -116,8 +116,69 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "If Condition1",
+				"type": "IfCondition",
+				"dependsOn": [
+					{
+						"activity": "copy_from_raw",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@activity('copy_from_raw').output",
+						"type": "Expression"
+					},
+					"ifFalseActivities": [
+						{
+							"name": "Set variable2",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "databricks_mode",
+								"value": "2"
+							}
+						}
+					],
+					"ifTrueActivities": [
+						{
+							"name": "Set variable1",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "databricks_mode",
+								"value": "1"
+							}
+						}
+					]
+				}
 			}
 		],
+		"parameters": {
+			"databricks_mode": {
+				"type": "string"
+			}
+		},
+		"variables": {
+			"databricks_mode": {
+				"type": "String"
+			}
+		},
 		"annotations": [],
 		"lastPublishTime": "2025-03-05T03:31:06Z"
 	},
