@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText2",
+	"name": "publish_expedia",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage1",
