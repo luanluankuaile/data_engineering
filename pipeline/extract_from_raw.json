@@ -74,7 +74,7 @@
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
-							"wildcardFolderPath": "expedia",
+							"wildcardFolderPath": "hotels",
 							"wildcardFileName": "*",
 							"enablePartitionDiscovery": false
 						},
